@@ -1,0 +1,9 @@
+{
+  "build": {
+    "cmd": "echo 'Build step, if any'"
+  },
+  "start": {
+    "cmd": "npx serve ."
+  }
+}
+
