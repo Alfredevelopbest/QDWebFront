@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formCredit</title>
+    <link rel="stylesheet" href="assets/css/bootstrap/BootstrapOrigin.css" />
+</head>
+<body>
+
+  <div class="form-container">
+    <header>
+      <h3>Formulario para inicio de solocitud de crédito</h3>
+      <p>
+        <h6>Ingresa al  formulario los datos para que puedas ser contactado por uno de nuestros asesores en crédito. <br>
+        Asegurate de leer y aceptar nuestra política de tratamiento de datos.</h6>
+      </p>
+    </header>
+    <div class="col-12">
+      <a href="dataPolicy.html">
+      <button type="button" class="btn btn-primary btn-sm">Ver política de tratamiento de datos</button>
+    </a>
+    </div>
+    <form class="row g-3 needs-validation" novalidate id="creditForm">
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="validationCustomName"  required>
+          <div id="mensaje"></div>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Escriba su nombre
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Apellidos</label>
+          <input type="text" class="form-control" id="validationCustomLastName"  required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Escriba sus apellidos
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Correo electrónico</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="validationCustomEmail" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Escriba su correo electrónico
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">Ciudad</label>
+          <select class="form-select" id="validationCustomCity" required>
+            <option selected disabled value="">Seleccione</option>
+            <option id="1">Arauca</option>
+            <option>Armenia</option>
+            <option>Barrancabermeja</option>
+            <option>Barranquilla</option>
+            <option>Bello</option>
+            <option>Bogotá</option>
+            <option>Bucaramanga</option>
+            <option>Buenaventura</option>
+            <option>Cali</option>
+            <option>Cartagena</option>
+            <option>Cartago</option>
+            <option>Caucasia</option>
+            <option>Ciénaga</option>
+            <option>Cúcuta</option>
+            <option>Dosquebradas</option>
+            <option>Duitama</option>
+            <option>Envigado</option>
+            <option>Facatativá</option>
+            <option>Florencia</option>
+            <option>Floridablanca</option>
+            <option>Fusagasugá</option>
+            <option>Girardot</option>
+            <option>Girón</option>
+            <option>Ibagué</option>
+            <option>Ipiales</option>
+            <option>Itagüí</option>
+            <option>Manizales</option>
+            <option>Maicao</option>
+            <option>Medellín</option>
+            <option>Mitú</option>
+            <option>Mocoa</option>
+            <option>Montería</option>
+            <option>Neiva</option>
+            <option>Ocaña</option>
+            <option>Palmira</option>
+            <option>Pamplona</option>
+            <option>Pasto</option>
+            <option>Pereira</option>
+            <option>Pitalito</option>
+            <option>Popayán</option>
+            <option>Puerto Asís</option>
+            <option>Quibdó</option>
+            <option>Riohacha</option>
+            <option>Sabanalarga</option>
+            <option>Sabaneta</option>
+            <option>San Andrés</option>
+            <option>San José del Guaviare</option>
+            <option>Santa Marta</option>
+            <option>Sincelejo</option>
+            <option>Soacha</option>
+            <option>Sogamoso</option>
+            <option>Soledad</option>
+            <option>Tuluá</option>
+            <option>Tumaco</option>
+            <option>Tunja</option>
+            <option>Turbo</option>
+            <option>Valledupar</option>
+            <option>Villavicencio</option>
+            <option>Yopal</option>
+            <option>Zipaquirá</option> 
+          </select>
+          <div class="invalid-feedback">
+            Seleccione la ciudad
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">Documento</label>
+          <select class="form-select" id="validationCustomDocumentType" required>
+            <option selected disabled value="">Tipo</option>
+            <option>Cédula de ciudadanía</option>
+            <option>Pasaporte</option>
+            <option>Cédula de extranjería</option> 
+          </select>
+          <div class="invalid-feedback">
+            Seleccione el tipo de documento
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Número de documento</label>
+          <input type="text" class="form-control" id="validationCustomDocumentNumber" required>
+          <div class="invalid-feedback">
+            Escriba su número de documento
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Teléfono</label>
+          <input type="text" class="form-control" id="validationCustomTelephone" required>
+          <div class="invalid-feedback">
+            Escriba su número de teléfono
+          </div>
+        </div>
+        
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">He leído y acepto la política de datos</label>
+            <div class="invalid-feedback">
+              Debe aceptar la política de datos
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Enviar</button>
+        </div>
+      </form>
+
+  </div>    
+<script src="assets/js/formsValidation.js"></script>
+<script src="assets/js/formsCredit.js"></script>
+
+</body>
+</html>
+
+

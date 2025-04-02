@@ -52,7 +52,7 @@ table {
 }
 
 body {
-	-webkit-text-size-adjust: none;
+	text-size-adjust: 100%;
 }
 
 mark {
@@ -84,7 +84,7 @@ input, select, textarea {
 
 	body {
 		background: #f0f4f4;
-		color: #5b5b5b;
+		color: #262626;
 		font-size: 15pt;
 		line-height: 1.85em;
 		font-family: 'Source Sans Pro', sans-serif;
@@ -111,7 +111,7 @@ input, select, textarea {
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 400;
-		color: #483949;
+		color: #262626;
 		line-height: 1.25em;
 	}
 
@@ -140,7 +140,7 @@ input, select, textarea {
 
 	strong, b {
 		font-weight: 400;
-		color: #483949;
+		color: white;
 	}
 
 	em, i {
@@ -232,6 +232,10 @@ input, select, textarea {
 		margin: 0 auto;
 		max-width: 100%;
 		width: 1400px;
+	}
+
+	.container p {
+		color: black;
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -1770,6 +1774,7 @@ input, select, textarea {
 			margin: 1em 0 2em 0;
 			line-height: 1.5em;
 			text-align: inherit;
+			color: white;
 		}
 
 	footer {
@@ -1797,8 +1802,21 @@ input, select, textarea {
 
 		.image.featured {
 			display: block;
-			width: 100%;
-			margin: 0 0 4em 0;
+			max-width: 100%;
+			height: auto;
+		}
+
+		.featuredBig {
+			display: flex;
+			justify-content: center;
+			max-width: 100%;
+			height: auto;
+		}
+
+		.featuredBig img{
+			width: 60%;
+			border-radius:5%;
+			margin-bottom: 1em;;
 		}
 
 		.image.left {
@@ -1953,6 +1971,7 @@ input, select, textarea {
 	form select,
 	form textarea {
 		-webkit-appearance: none;
+		appearance: none;
 		display: block;
 		border: 0;
 		background: #fafafa;
@@ -2055,7 +2074,7 @@ input, select, textarea {
 	.button {
 		position: relative;
 		display: inline-block;
-		background: #df7366;
+		background: #d87da0;
 		color: #fff;
 		text-align: center;
 		border-radius: 0.5em;
@@ -2077,7 +2096,7 @@ input, select, textarea {
 		button:hover,
 		.button:hover {
 			color: #fff;
-			background: #ef8376;
+			background: #e00f60;
 		}
 
 		input[type="button"].alt,
@@ -2163,20 +2182,23 @@ input, select, textarea {
 /* Wrapper */
 
 	.wrapper {
-		background: #fff;
+		background-image: url(/images/BackgroundWrapperStyle2.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 100%;
 		margin: 0 0 2em 0;
-		padding: 6em 0 6em 0;
 	}
 
 		.wrapper.style2 {
-			padding-top: 0;
+			padding-top: 2em;
 		}
 
 /* Header */
 
 	#header {
 		position: relative;
-		background-image: url("../../images/header.jpg");
+		background-image: url("/images/headerBackgrond.jpg");
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -2208,6 +2230,7 @@ input, select, textarea {
 			#header header > p {
 				font-size: 1.25em;
 				margin: 0;
+				color: white;
 			}
 
 		#header h1 {
@@ -2215,10 +2238,6 @@ input, select, textarea {
 			font-size: 3em;
 			line-height: 1em;
 		}
-
-			#header h1 a {
-				color: inherit;
-			}
 
 		#header .button {
 			display: inline-block;
@@ -2281,16 +2300,8 @@ input, select, textarea {
 
 /* Nav */
 
-	#nav {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		text-align: center;
-		padding: 1.5em 0 1.5em 0;
-		z-index: 1;
-		overflow: hidden;
-	}
+	#nav 
+		
 
 		#nav > ul {
 			line-height: 0px;
@@ -2305,7 +2316,6 @@ input, select, textarea {
 			#nav > ul:before, #nav > ul:after {
 				content: '';
 				display: block;
-				width: 300%;
 				position: absolute;
 				top: 50%;
 				margin-top: -2px;
@@ -2408,7 +2418,9 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		background: #fff;
+		background-color: #f9ecf2;
+		background-repeat: no-repeat;
+		background-size: cover;
 		text-align: center;
 		padding: 4.5em 0 4.5em 0;
 		margin-bottom: 0;
@@ -2416,6 +2428,16 @@ input, select, textarea {
 
 		#banner header > p {
 			margin-bottom: 0;
+			color: black;
+		}
+
+		#banner strong {
+			color: #00e600;
+			text-decoration: #00e600;
+		}
+
+		#banner h2 {
+			color: black;
 		}
 
 /* Content */
@@ -2487,6 +2509,10 @@ input, select, textarea {
 				margin: 0 0 3em 0;
 			}
 
+			.contact p{
+				color: white;
+			}
+
 		#footer .copyright {
 			text-align: center;
 			color: rgba(128, 128, 128, 0.75);
@@ -2509,6 +2535,7 @@ input, select, textarea {
 		overflow: hidden;
 		padding: 2em 0 2em 0;
 		margin-bottom: 0;
+		background-color: #2d2828;
 	}
 
 		.carousel .forward, .carousel .backward {
@@ -2526,7 +2553,7 @@ input, select, textarea {
 				width: 6em;
 				height: 6em;
 				border-radius: 100%;
-				background-color: rgba(72, 57, 73, 0.5);
+				background-color: #d87da0;
 				position: absolute;
 				top: 50%;
 				margin-top: -3em;
@@ -2536,6 +2563,7 @@ input, select, textarea {
 				-ms-transition: background-color 0.35s ease-in-out;
 				transition: background-color 0.35s ease-in-out;
 				-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
 			}
 
 			.carousel .forward:after, .carousel .backward:after {
@@ -2549,7 +2577,7 @@ input, select, textarea {
 			}
 
 			.carousel .forward:hover:before, .carousel .backward:hover:before {
-				background-color: rgba(239, 131, 118, 0.75);
+				background-color: #e00f60;
 			}
 
 		.carousel .forward {
@@ -2590,7 +2618,7 @@ input, select, textarea {
 		.carousel article {
 			display: inline-block;
 			width: 18em;
-			background: #fff;
+			background: 235, 213, 245;
 			text-align: center;
 			padding: 0 1em 3em 1em;
 			margin: 0 2em 0 0;
@@ -2613,10 +2641,16 @@ input, select, textarea {
 				width: auto;
 				margin-right: -2em;
 				margin-bottom: 3em;
+				
 			}
 
 			.carousel article p {
 				text-align: center;
+				color: #d4cece;
+				
+			}
+			.carousel article h3{
+				color: white;
 			}
 
 /* Wide */
@@ -3135,4 +3169,11 @@ input, select, textarea {
 						margin-bottom: 2em;
 					}
 
+	}
+	/*Image container*/
+		
+	.carouselImage{
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
 	}
