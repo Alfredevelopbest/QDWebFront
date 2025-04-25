@@ -38,7 +38,7 @@ const customer = {
     telephoneNumber
 };
 try{
-    const response = await fetch("https://webserviceqdback.onrender.com",
+    const response = await fetch("https://webserviceqdback.onrender.com/api/customer/post",
         {method: "POST",
          headers: {"Content-Type": "application/json"},
          body: JSON.stringify(customer)
