@@ -38,9 +38,13 @@ const customer = {
     telephoneNumber
 };
 try{
-    const response = await fetch("https://localhost:7201/api/customer/post",
+    const isLocalhost = window.location.hostname === "localhost";
+    const backendUrl = isLocalhost
+        ? "https://localhost:7201" //Local enviroment
+        : "https://webserviceqdback.onrender.com" //Production enviroment
+    const response = await fetch(`${backendUrl}/api/customer/post`, 
         {method: "POST",
-         headers: {"Content-Type": "application/json"},
+         headers: {"Content-Type": "application/json"}, 
          body: JSON.stringify(customer)
         });
         const text = await response.text(); // Get response text
