@@ -2182,7 +2182,7 @@ input, select, textarea {
 /* Wrapper */
 
 	.wrapper {
-		background-image: url(/images/BackgroundWrapperStyle2.jpg);
+		background-image: url(/assets/css/images/BackgroUndWrapperStyle2.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -2198,7 +2198,7 @@ input, select, textarea {
 
 	#header {
 		position: relative;
-		background-image: url("/images/headerBackgrond.jpg");
+		background-image: url(/assets/css/images/headerBackgroUndCrop.jpg);
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
