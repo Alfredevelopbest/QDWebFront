@@ -9208,7 +9208,7 @@ a {
 #dataPolicy h6{
   font-family: 'Times New Roman', Times, serif;
   color: black;
-  text-align:center ;
+  text-align:left ;
 }
 
 .btnPolicy {
@@ -9216,4 +9216,7 @@ a {
   justify-content: center;
 }
 
+.container-md-3{
+  margin-top: 2%;
+}
 

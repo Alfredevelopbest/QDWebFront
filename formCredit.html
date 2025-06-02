@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <div class="form-container">
+  <div class="container">
     <header>
       <h3>Formulario para inicio de solicitud de crédito</h3>
       <p>
@@ -53,102 +53,103 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <label for="validationCustom04" class="form-label">Ciudad</label>
-          <select class="form-select" id="validationCustomCity" required>
-            <option selected disabled value="">Seleccione</option>
-            <option id="1">Arauca</option>
-            <option>Armenia</option>
-            <option>Barrancabermeja</option>
-            <option>Barranquilla</option>
-            <option>Bello</option>
-            <option>Bogotá</option>
-            <option>Bucaramanga</option>
-            <option>Buenaventura</option>
-            <option>Cali</option>
-            <option>Cartagena</option>
-            <option>Cartago</option>
-            <option>Caucasia</option>
-            <option>Ciénaga</option>
-            <option>Cúcuta</option>
-            <option>Dosquebradas</option>
-            <option>Duitama</option>
-            <option>Envigado</option>
-            <option>Facatativá</option>
-            <option>Florencia</option>
-            <option>Floridablanca</option>
-            <option>Fusagasugá</option>
-            <option>Girardot</option>
-            <option>Girón</option>
-            <option>Ibagué</option>
-            <option>Ipiales</option>
-            <option>Itagüí</option>
-            <option>Manizales</option>
-            <option>Maicao</option>
-            <option>Medellín</option>
-            <option>Mitú</option>
-            <option>Mocoa</option>
-            <option>Montería</option>
-            <option>Neiva</option>
-            <option>Ocaña</option>
-            <option>Palmira</option>
-            <option>Pamplona</option>
-            <option>Pasto</option>
-            <option>Pereira</option>
-            <option>Pitalito</option>
-            <option>Popayán</option>
-            <option>Puerto Asís</option>
-            <option>Quibdó</option>
-            <option>Riohacha</option>
-            <option>Sabanalarga</option>
-            <option>Sabaneta</option>
-            <option>San Andrés</option>
-            <option>San José del Guaviare</option>
-            <option>Santa Marta</option>
-            <option>Sincelejo</option>
-            <option>Soacha</option>
-            <option>Sogamoso</option>
-            <option>Soledad</option>
-            <option>Tuluá</option>
-            <option>Tumaco</option>
-            <option>Tunja</option>
-            <option>Turbo</option>
-            <option>Valledupar</option>
-            <option>Villavicencio</option>
-            <option>Yopal</option>
-            <option>Zipaquirá</option> 
-          </select>
-          <div class="invalid-feedback">
-            Seleccione la ciudad
+        <div class="container-md-3">
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">Ciudad</label>
+            <select class="form-select" id="validationCustomCity" required>
+              <option selected disabled value="">Seleccione</option>
+              <option id="1">Arauca</option>
+              <option>Armenia</option>
+              <option>Barrancabermeja</option>
+              <option>Barranquilla</option>
+              <option>Bello</option>
+              <option>Bogotá</option>
+              <option>Bucaramanga</option>
+              <option>Buenaventura</option>
+              <option>Cali</option>
+              <option>Cartagena</option>
+              <option>Cartago</option>
+              <option>Caucasia</option>
+              <option>Ciénaga</option>
+              <option>Cúcuta</option>
+              <option>Dosquebradas</option>
+              <option>Duitama</option>
+              <option>Envigado</option>
+              <option>Facatativá</option>
+              <option>Florencia</option>
+              <option>Floridablanca</option>
+              <option>Fusagasugá</option>
+              <option>Girardot</option>
+              <option>Girón</option>
+              <option>Ibagué</option>
+              <option>Ipiales</option>
+              <option>Itagüí</option>
+              <option>Manizales</option>
+              <option>Maicao</option>
+              <option>Medellín</option>
+              <option>Mitú</option>
+              <option>Mocoa</option>
+              <option>Montería</option>
+              <option>Neiva</option>
+              <option>Ocaña</option>
+              <option>Palmira</option>
+              <option>Pamplona</option>
+              <option>Pasto</option>
+              <option>Pereira</option>
+              <option>Pitalito</option>
+              <option>Popayán</option>
+              <option>Puerto Asís</option>
+              <option>Quibdó</option>
+              <option>Riohacha</option>
+              <option>Sabanalarga</option>
+              <option>Sabaneta</option>
+              <option>San Andrés</option>
+              <option>San José del Guaviare</option>
+              <option>Santa Marta</option>
+              <option>Sincelejo</option>
+              <option>Soacha</option>
+              <option>Sogamoso</option>
+              <option>Soledad</option>
+              <option>Tuluá</option>
+              <option>Tumaco</option>
+              <option>Tunja</option>
+              <option>Turbo</option>
+              <option>Valledupar</option>
+              <option>Villavicencio</option>
+              <option>Yopal</option>
+              <option>Zipaquirá</option> 
+            </select>
+            <div class="invalid-feedback">
+              Seleccione la ciudad
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">Documento</label>
+            <select class="form-select" id="validationCustomDocumentType" required>
+              <option selected disabled value="">Tipo</option>
+              <option>Cédula de ciudadanía</option>
+              <option>Pasaporte</option>
+              <option>Cédula de extranjería</option> 
+            </select>
+            <div class="invalid-feedback">
+              Seleccione el tipo de documento
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Número de documento</label>
+            <input type="text" class="form-control" id="validationCustomDocumentNumber" required>
+            <div class="invalid-feedback">
+              Escriba su número de documento
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Teléfono</label>
+            <input type="text" class="form-control" id="validationCustomTelephone" required>
+            <div class="invalid-feedback">
+              Escriba su número de teléfono
+            </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <label for="validationCustom04" class="form-label">Documento</label>
-          <select class="form-select" id="validationCustomDocumentType" required>
-            <option selected disabled value="">Tipo</option>
-            <option>Cédula de ciudadanía</option>
-            <option>Pasaporte</option>
-            <option>Cédula de extranjería</option> 
-          </select>
-          <div class="invalid-feedback">
-            Seleccione el tipo de documento
-          </div>
-        </div>
-        <div class="col-md-3">
-          <label for="validationCustom05" class="form-label">Número de documento</label>
-          <input type="text" class="form-control" id="validationCustomDocumentNumber" required>
-          <div class="invalid-feedback">
-            Escriba su número de documento
-          </div>
-        </div>
-        <div class="col-md-3">
-          <label for="validationCustom05" class="form-label">Teléfono</label>
-          <input type="text" class="form-control" id="validationCustomTelephone" required>
-          <div class="invalid-feedback">
-            Escriba su número de teléfono
-          </div>
-        </div>
-        
         <div class="col-12">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
