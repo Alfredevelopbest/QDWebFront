@@ -2,15 +2,36 @@
 
 document.getElementById("creditForm").addEventListener("submit", async function 
     (event) { 
-        event.preventDefault(); // It doesn't let page be rechaged
+        event.preventDefault(); // It doesn't let page rechage
 
-const customerName = document.getElementById("validationCustomName").value;
-const customerLastname = document.getElementById("validationCustomLastName").value;
-const email = document.getElementById("validationCustomEmail").value;
+document.getElementById("cityError").innerText = "";
+document.getElementById("documentTypeError").innerText = "";
+
+const customerName = document.getElementById("validationCustomName").value.trim();
+const customerLastname = document.getElementById("validationCustomLastName").value.trim();
+const email = document.getElementById("validationCustomEmail").value.trim();
 let cityId = document.getElementById("validationCustomCity").value;
 let documentTypeId = document.getElementById("validationCustomDocumentType").value;
-const documentNumber = document.getElementById("validationCustomDocumentNumber").value;
-const telephoneNumber = document.getElementById("validationCustomTelephone").value; 
+const documentNumber = document.getElementById("validationCustomDocumentNumber").value.trim();
+const telephoneNumber = document.getElementById("validationCustomTelephone").value.trim(); 
+
+//Validation for select
+
+let valid = true;
+
+if (cityId === ""){
+    document.getElementById("cityError").innerText = "Selecciona tu ciudad.";
+    valid = false;
+}
+
+if(documentTypeId === ""){
+    document.getElementById("documentTypeError").innerText = "Selecciona tu tipo de documento.";
+    valid = false;
+}
+
+if(!valid){
+    return;
+}
 
 const cityArray = ["", "Arauca", "Armenia", "Barrancabermeja", "Barranquilla", "Bello", "Bogotá", "Bucaramanga",
     "Buenaventura", "Cali", "Cartagena", "Cartago", "Caucasia", "Ciénaga", "Cúcuta", "Dosquebradas","",
