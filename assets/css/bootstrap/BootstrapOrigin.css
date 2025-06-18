@@ -373,7 +373,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: inherit;
   font-weight: 500;
   line-height: 1.2;
-  color: inherit;
+  color: black;
 }
 
 h1, .h1 {
@@ -564,6 +564,7 @@ pre code {
 
 .container {
   width: 100%;
+  padding-top: 7%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -9219,5 +9220,11 @@ a {
   color: black;
   font-size: 80%;
   margin-top: 5px
+}
+
+.modalBox{
+  width: 50%;
+  max-height: 10%;
+  color: black;
 }
 

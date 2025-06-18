@@ -1,5 +1,7 @@
 //const { snakeCase } = require("typeorm/util/StringUtils.js");
 
+//const bootstrap = require("bootstrap");
+
 document.getElementById("creditForm").addEventListener("submit", async function 
     (event) { 
         event.preventDefault(); // It doesn't let page rechage
@@ -20,12 +22,12 @@ const telephoneNumber = document.getElementById("validationCustomTelephone").val
 let valid = true;
 
 if (cityId === ""){
-    document.getElementById("cityError").innerText = "Selecciona tu ciudad.";
+    document.getElementById("cityError").innerText = "*Selecciona tu ciudad !!";
     valid = false;
 }
 
 if(documentTypeId === ""){
-    document.getElementById("documentTypeError").innerText = "Selecciona tu tipo de documento.";
+    document.getElementById("documentTypeError").innerText = "*Selecciona tu tipo de documento !!";
     valid = false;
 }
 
@@ -41,13 +43,13 @@ const cityArray = ["", "Arauca", "Armenia", "Barrancabermeja", "Barranquilla", "
     "Puerto Asís", "Quibdó", "Riohacha", "Sabanalarga", "Sabaneta", "San Andrés",
     "San José del Guaviare", "Santa Marta", "Sincelejo", "Soacha", "Sogamoso", "Soledad", "Tuluá",
     "Tumaco", "Tunja", "Turbo", "Valledupar", "Villavicencio", "Yopal", "Zipaquirá" 
- ]
+]
 
- const documentTypeArray = ["", "Cédula de ciudadanía", "Pasaporte", "Cédula de extranjería"];
+const documentTypeArray = ["", "Cédula de ciudadanía", "Pasaporte", "Cédula de extranjería"];
 
- const documentTypeIndex = documentTypeArray.indexOf(documentTypeId);
+const documentTypeIndex = documentTypeArray.indexOf(documentTypeId);
 
- const cityIndex = cityArray.indexOf(cityId);
+const cityIndex = cityArray.indexOf(cityId);
 
 const customer = {
     customerName,
@@ -58,6 +60,7 @@ const customer = {
     documentNumber,
     telephoneNumber
 };
+
 try{
     const isLocalhost = window.location.hostname === "localhost";
     const backendUrl = isLocalhost
@@ -71,22 +74,36 @@ try{
         const text = await response.text(); // Get response text
         console.log ("Server Response:", text); 
         const result = text ? JSON.parse(text) : {}; //To parse only if response get something
-        const elementMessage = document.getElementById("mensaje");
+        
+        //Validation for modal activation if server response is Ok
+        if(response.ok){
+            const modalValidForm = new bootstrap.Modal(document.getElementById('staticBackdrop'));
+            modalValidForm.show(); //Modal is shown
+
+            document.getElementById('staticBackdrop').addEventListener('hidden.bs.modal',function(){
+                window.location.href = "seccionCamas.html";
+            });
+        }
+
+        else{
+            alert("Ha ocurrido un error en el envío del formulario. Intenta de nuevamente");
+        }
+
+
+        /* const elementMessage = document.getElementById("mensaje");
 
         if (elementMessage){
             elementMessage.innerText = response.ok ? (result.message || "Cliente registrado exitosamente"):
             "Error al registrar cliente";
         }
         else{
-            console.warn("Elemento con ID 'mensaje' no encontrado");
-        }
+            //console.warn("Elemento con ID 'mensaje' no encontrado");
+        }*/
     }
         catch(error){
-            console.error("Error:", error);
+            console.error("Error al enviar el formulario.", error);
             const elementMessage = document.getElementById("mensaje");
-            if(elementMessage){
-                elementMessage.innerText = "Error de conexión";
-            }
+            alert("Ha ocurrido un error de red. Intenta mas tarde.");
         }
     
 }

@@ -7,7 +7,30 @@
     <link rel="stylesheet" href="assets/css/bootstrap/BootstrapOrigin.css" />
 </head>
 <body>
-
+<!-- Full screen modal -->
+ <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+</button>
+-->
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Tu solicitud ha sido creada exitosamente!!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Entendido</button>
+        <!-- <button type="button" class="btn btn-primary">Entendido</button> -->
+      </div>
+    </div>
+  </div>
+</div>
   <div class="container">
     <header>
       <h3>Formulario para inicio de solicitud de crédito</h3>
@@ -25,22 +48,16 @@
         <div class="col-md-4">
           <label for="validationCustom01" class="form-label">Nombre</label>
           <input type="text" class="form-control" id="validationCustomName"  required>
-        <!--  <div id="mensaje"></div> -->
-          <div class="valid-feedback">
-            Looks good!
-          </div>
+        <!-- <div id="mensaje"></div> -->
           <div class="invalid-feedback">
-            Escribe tu nombre
+            *Escribe tu nombre !!
           </div>
         </div>
         <div class="col-md-4">
           <label for="validationCustom02" class="form-label">Apellidos</label>
           <input type="text" class="form-control" id="validationCustomLastName"  required>
-          <div class="valid-feedback">
-            Looks good!
-          </div>
           <div class="invalid-feedback">
-            Escribe tus apellidos
+            *Escribe tus apellidos !!
           </div>
         </div>
         <div class="col-md-4">
@@ -49,7 +66,7 @@
             <span class="input-group-text" id="inputGroupPrepend">@</span>
             <input type="text" class="form-control" id="validationCustomEmail" aria-describedby="inputGroupPrepend" required>
             <div class="invalid-feedback">
-              Escribe tu correo electrónico
+              *Escribe tu correo electrónico !!
             </div>
           </div>
         </div>
@@ -135,14 +152,14 @@
             <label for="validationCustom05" class="form-label">Número de documento</label>
             <input type="text" class="form-control" id="validationCustomDocumentNumber" required>
             <div class="invalid-feedback">
-              Escribe tu número de documento
+              *Escribe tu número de documento !!
             </div>
           </div>
           <div class="col-md-3">
             <label for="validationCustom05" class="form-label">Teléfono</label>
             <input type="text" class="form-control" id="validationCustomTelephone" required>
             <div class="invalid-feedback">
-              Escribe tu número de teléfono
+              *Escribe tu número de teléfono !!
             </div>
           </div>
         </div>
@@ -151,7 +168,7 @@
             <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
             <label class="form-check-label" for="invalidCheck">He leído y acepto la política de datos</label>
             <div class="invalid-feedback">
-              Debes aceptar la política de datos para continuar
+              *Debes aceptar la política de datos para continuar !!
             </div>
           </div>
         </div>
@@ -163,6 +180,7 @@
   </div>    
 <script src="assets/js/formsValidation.js"></script>
 <script src="assets/js/formsCredit.js"></script>
+<script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
