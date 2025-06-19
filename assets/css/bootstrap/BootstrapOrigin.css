@@ -2544,13 +2544,13 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #fff;
-  background-color: #6c757d;
+  background-color: #d87da0;
   border-color: #6c757d;
 }
 
 .btn-secondary:hover {
   color: #fff;
-  background-color: #5a6268;
+  background-color: #e00f60;
   border-color: #545b62;
 }
 
@@ -5521,6 +5521,7 @@ button.close {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1rem;
+  color: black;
 }
 
 .modal-footer {

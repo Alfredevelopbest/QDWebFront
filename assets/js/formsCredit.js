@@ -77,16 +77,16 @@ try{
         
         //Validation for modal activation if server response is Ok
         if(response.ok){
+            document.getElementById("creditForm").reset();
             const modalValidForm = new bootstrap.Modal(document.getElementById('staticBackdrop'));
             modalValidForm.show(); //Modal is shown
-
             document.getElementById('staticBackdrop').addEventListener('hidden.bs.modal',function(){
                 window.location.href = "seccionCamas.html";
             });
         }
 
         else{
-            alert("Ha ocurrido un error en el envío del formulario. Intenta de nuevamente");
+            alert("Ha ocurrido un error en el envío del formulario. Intenta nuevamente");
         }
 
 
