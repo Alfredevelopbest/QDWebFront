@@ -86,7 +86,7 @@ try{
         }
 
         else{
-            alert("Ha ocurrido un error en el envío del formulario. Intenta nuevamente");
+            alert("Asegurate de llenar correctamente todos los campos del formulario.");
         }
 
 
